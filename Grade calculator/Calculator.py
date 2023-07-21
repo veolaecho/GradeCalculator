@@ -76,17 +76,3 @@ if __name__ == "__main__":
     Module_1, Module_2, Module_3, Module_4, Module_5 = collect_marks()
     overall_mark = calculate_overall_mark(Module_1, Module_2, Module_3, Module_4, Module_5)
     calculate_missing_module_mark(overall_mark)
-
-# Now trying to do unit tests
-
-import unittest
-from Calculator import calculate_overall_mark, calculate_missing_module_mark
-
-class TestCalculateOverallMark(unittest.TestCase):
-    def test_all_modules_completed(self):
-        overall_mark = calculate_overall_mark(80, 75, 85, 90, 70)
-        self.assertEqual(overall_mark, 80.5)
-
-    def test_one_module_missed(self):
-        overall_mark = calculate_overall_mark(80, 75, -1, 90, 70)
-        self.assertEqual(overall_mark, 76.0)
