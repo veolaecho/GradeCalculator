@@ -26,14 +26,15 @@ def test_collect_marks_input5(monkeypatch):#passed
     i = input ("Please enter students mark for module 5: ")
     assert i == "-5m"
 
-def test_collect_marks(monkeypatch): #passed
+def test_collect_marks6(monkeypatch): #passed
     inputs = iter(['90', '85', '75', '95', '80'])
     monkeypatch.setattr('builtins.input', lambda _: next(inputs))
     result = collect_marks()
     assert result == (90, 85, 75, 95, 80)
 
+# Testing calculate_overall_mark function
+# This part isn't completed yet
+ 
+ #from Calculator import calculate_overall_mark
 
-# Testing percentage_mark function
-
-#def test_percentage_mark(monkeypatch):
-   # monkeypatch.setattr('builtins.input', lambda _: " ")
+#def test_calculate_overall_mark(calculate_overall_mark):
