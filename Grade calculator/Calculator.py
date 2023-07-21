@@ -80,7 +80,7 @@ if __name__ == "__main__":
 # Now trying to do unit tests
 
 import unittest
-from Calculator2 import calculate_overall_mark, calculate_missing_module_mark
+from Calculator import calculate_overall_mark, calculate_missing_module_mark
 
 class TestCalculateOverallMark(unittest.TestCase):
     def test_all_modules_completed(self):
